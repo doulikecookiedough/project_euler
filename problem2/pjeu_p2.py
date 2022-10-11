@@ -21,7 +21,7 @@ def get_fibonacci_even_valued_sum(num):
 
     for term in fibonacci_array:
         if term % 2 == 0:
-            even_valued_sum = even_valued_sum + term
+            even_valued_sum += term
 
     return even_valued_sum
 

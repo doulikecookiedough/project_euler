@@ -9,8 +9,8 @@ def get_multiple(val1, val2):
         quotient_one = counter % val1
         quotient_two = counter % val2
         if quotient_one == 0 or quotient_two == 0:
-            sum = sum + counter
-        counter = counter + 1
+            sum += counter
+        counter += 1
 
     return sum
 
