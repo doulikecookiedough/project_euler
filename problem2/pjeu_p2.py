@@ -28,5 +28,6 @@ def get_fibonacci_even_valued_sum(num):
 
 if __name__ == '__main__':
     value_limit = 4000000
+
     result = get_fibonacci_even_valued_sum(value_limit)
     print(result)
