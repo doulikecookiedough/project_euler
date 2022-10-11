@@ -15,5 +15,6 @@ def get_multiple(val1, val2):
     return sum
 
 
-result = get_multiple(3, 5)
-print(result)
+if __name__ == '__main__':
+    result = get_multiple(3, 5)
+    print(result)
