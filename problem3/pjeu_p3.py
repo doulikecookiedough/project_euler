@@ -27,13 +27,34 @@ def get_largest_prime_factor_sol_1(num):
 
 
 def get_largest_prime_factor_sol_2(num):
-    # Determine new algorithm to quickly generate a list of prime numbers equal to provided number
-    print(num)
+    # Determine new algorithm to quickly generate a list of prime numbers up to provided number
+
+    def check_for_remainder(num, val):
+        modulo_check = num % val
+        if modulo_check == 0:
+            return True
+        else:
+            return False
+
+    # Get first divisible factor
+    start_value = 2
+    first_divisible_factor = 0
+
+    while first_divisible_factor == 0:
+        status = check_for_remainder(num, start_value)
+        if status == True:
+            first_divisible_factor = int(num / start_value)
+            break
+        else:
+            start_value += 1
+            check_for_remainder(num, start_value)
+
+    return first_divisible_factor
 
 
 if __name__ == '__main__':
     # result = get_largest_prime_factor(60)
     # result = get_largest_prime_factor_sol_1(13195)
-    result = get_largest_prime_factor_sol_2(13195)
+    result = get_largest_prime_factor_sol_2(600851475143)
     # result = get_largest_prime_factor(600851475143)
     print(result)
