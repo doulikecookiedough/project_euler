@@ -48,13 +48,11 @@ def get_largest_prime_factor_sol_2(num):
     # Get first divisible factor
     start_value = 2
     largest_divisible_factor = 0
-    largest_prime_factor = 0
 
     while largest_divisible_factor == 0:
         status = check_for_remainder(num, start_value)
         if status == True:
             largest_divisible_factor = int(num / start_value)
-            first_divisible_factor = start_value
         else:
             start_value += 1
             check_for_remainder(num, start_value)
@@ -77,6 +75,6 @@ def get_largest_prime_factor_sol_3(num):
 if __name__ == '__main__':
     # result = get_largest_prime_factor(60)
     # result = get_largest_prime_factor_sol_1(13195)
-    result = get_largest_prime_factor_sol_2(13195)
+    result = get_largest_prime_factor_sol_2(600851475143)
     # result = get_largest_prime_factor(600851475143)
     print(result)
