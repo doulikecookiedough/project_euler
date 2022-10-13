@@ -67,10 +67,7 @@ def get_largest_prime_factor_sol_2(num):
 
 
 def get_largest_prime_factor_sol_3(num):
-    """Use a factor tree to improve performance"""
-    # Create a prime factor tree
-    # Get the first two factors, then break it down from there
-    # Add all the numbers to a list, sort the list
+    """Use the concept of a factor tree to improve performance"""
 
     def check_for_remainder(num, val):
         modulo_check = num % val
