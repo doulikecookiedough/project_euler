@@ -55,6 +55,6 @@ def get_largest_prime_factor_sol_2(num):
 if __name__ == '__main__':
     # result = get_largest_prime_factor(60)
     # result = get_largest_prime_factor_sol_1(13195)
-    result = get_largest_prime_factor_sol_2(60)
+    result = get_largest_prime_factor_sol_2(600851475143)
     # result = get_largest_prime_factor(600851475143)
     print(result)
