@@ -2,21 +2,9 @@
 # What is the largest prime factor of the number 600851475143?
 
 
-def get_largest_prime_factor(num):
-    # Prime numbers can be only divisible by itself and 1
-    # Find all the numbers that can be divisible from the input number
-    # Determine if the numbers are prime numbers
-    # Create a new list
-    # Select the last item in the list (largest prime factor)
-
-    # num_factor_list = []
-    # for i in range(1, num + 1):
-    #     # i is divisibe if there is no remainder
-    #     if num % i == 0:
-    #         # print(f"divisible: {i}")
-    #         num_factor_list.append(i)
-
-    prime_factor_list = []
+# Loses effectiveness as N grows larger
+def get_largest_prime_factor_sol_1(num):
+    largest_prime_factor = 1
     for i in range(1, num + 1):
         if i != 1 and num % i == 0:
             prime_number_flag = 0
@@ -31,13 +19,21 @@ def get_largest_prime_factor(num):
                 prime_number_flag = 0
                 pass
             else:
-                prime_factor_list.append(i)
+                if i > largest_prime_factor:
+                    largest_prime_factor = i
                 prime_number_flag = 0
 
-    print(prime_factor_list)
+    return largest_prime_factor
+
+
+def get_largest_prime_factor_sol_2(num):
+    # Determine new algorithm to quickly generate a list of prime numbers equal to provided number
+    print(num)
 
 
 if __name__ == '__main__':
-    # get_largest_prime_factor(60)
-    get_largest_prime_factor(13195)
-    # get_largest_prime_factor(600851475143)
+    # result = get_largest_prime_factor(60)
+    # result = get_largest_prime_factor_sol_1(13195)
+    result = get_largest_prime_factor_sol_2(13195)
+    # result = get_largest_prime_factor(600851475143)
+    print(result)
