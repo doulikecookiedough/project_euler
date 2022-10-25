@@ -76,6 +76,7 @@ def get_largest_product_three_digit_palindrome(num):
 
 
 def get_largest_product_three_digit_palindrome_2(num):
+    """Two for loops to iterate over values."""
     def get_product(val1, val2):
         product = val1 * val2
         return product
